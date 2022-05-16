@@ -14,6 +14,8 @@ if (!app.Environment.IsDevelopment())
     // app.UseHsts();
 }
 
+// This is from dev
+
 app.UseForwardedHeaders(new ForwardedHeadersOptions{
     ForwardedHeaders = Microsoft.AspNetCore.HttpOverrides.ForwardedHeaders.XForwardedFor | Microsoft.AspNetCore.HttpOverrides.ForwardedHeaders.XForwardedProto
 });
@@ -28,4 +30,5 @@ app.UseAuthentication();
 
 app.MapRazorPages();
 
+// Run the actual application...
 app.Run();
